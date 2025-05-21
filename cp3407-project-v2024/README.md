@@ -22,7 +22,6 @@ It is recommended to complete this assignment in a group of 2-4 students.
 3. Nay Thar Htet
 4. May Thin Htet
 
-
 # Project planning BEFORE iteration-1, (see chapters 1-3)
 Checklist/TODOs: 
 * Update the following during each week prac session
