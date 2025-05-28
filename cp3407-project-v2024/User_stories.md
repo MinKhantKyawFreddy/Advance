@@ -2,7 +2,7 @@
 Title: User Registration
 Priority:High
 
-Description:As new user: I want to register online with my student ID and fitness preferences, so that I can start booking gym
+Description:As new user:I want to register online with my student ID and fitness preferences, so that I can start booking gym
 sessions tailored to my needs.
 
 Effort Estimate:3 days
