@@ -1,6 +1,6 @@
 ## User Story 1:
 Title: User Registration
-Priority:High.
+Priority:High
 
 Description:As new user: I want to register online with my student ID and fitness preferences, so that I can start booking gym
 sessions tailored to my needs.
