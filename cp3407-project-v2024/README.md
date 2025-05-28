@@ -96,11 +96,3 @@ Total: YY days
 
 
 ### Team roles
-separate works
-sdsd
-\dsd
-sds
-sdf
-ghg
-knm
-mml
