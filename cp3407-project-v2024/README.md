@@ -43,4 +43,4 @@ Contribution: Develop test cases, validate feature functionality, and ensure hig
 
 Nay Thar Htet (DevOps and Deployment Lead):
 Responsibilities: Manage version control (GitHub), set up CI/CD pipelines, and explore AWS deployment (EC2 for backend, RDS for MySQL). Ensure smooth integration between frontend and backend.
-Contribution: Configure project repository, handle AWS setup, and document deployment steps and development tools used.
+Contribution: Configure project repository, handle AWS setup, and document deployment steps and development tools used..
