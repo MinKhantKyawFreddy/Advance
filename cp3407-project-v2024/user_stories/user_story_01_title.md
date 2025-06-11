@@ -4,6 +4,24 @@ as this [user_stories folder](./)
 # User story title: e.g. Show current deals
 
 Keep any other version here as well, e.g. Display current deals, Let user to click on "show-current-deals".
+## User Story 1:
+Title: User Registration
+
+## User Story 2:
+Title: Book Gym Session
+
+## User Story 3:
+Title:AI-Powered Workout Plan
+
+## User Story: (Administrator Stories)
+## User Story 4:
+Title: Manage User Registrations
+
+## User Story 5:
+Title: Monitor Gym Session Bookings and Attendance
+
+## User Story 6:
+Title: Generate and Download Usage Reports
 
 ## Priority: 10 (e.g. latest for iteration-1)
 Any notes on priority go here. 
