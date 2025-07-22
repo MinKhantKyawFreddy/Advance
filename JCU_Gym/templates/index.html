@@ -15,8 +15,8 @@
             <!-- Mobile Nav -->
         <nav class="mobile-nav">
                 <div id="menu-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About us</a>
                 <a href="classes.html">Classes</a>
                 <a href="nutrition.html">Nutrition</a>
                 <a href="contact.html">Contact Us</a>
@@ -32,8 +32,8 @@
             <!-- Tablet,Desktop -->
     <nav class="tablet-desktop">
         <ul>
-                <li><a href="index.html">Home</a></li>        
-                <li><a href="about.html"> About us</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
                 <li><a href="classes.html">Classes</a></li>   
                 <li><a href="nutrion.html">Nutrition</a></li> 
                 <li><a href="contact.html">Contact Us</a></li>

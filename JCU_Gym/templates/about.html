@@ -13,8 +13,8 @@
         <!-- Mobile Nav -->
         <nav class="mobile-nav">
             <div id="menu-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About us</a>
             <a href="classes.html">Classes</a>
             <a href="nutrition.html">Nutrition</a>
             <a href="contact.html">Contact Us</a>
@@ -25,13 +25,13 @@
     </nav>
 
     <header>
-        <a href="index.html"><img src="images/Jculogo_compressed_resized_resized.png" alt="forward fitness logo"></a>
+        <img src="{% static 'Jculogo_compressed_resized_resized.png' %}" alt="JCU Logo">
     </header>
     
         <nav class="tablet-desktop">
             <ul>
-                    <li><a href="index.html">Home</a></li>        
-                    <li><a href="about.html"> About us</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
                     <li><a href="classes.html">Classes</a></li>   
                     <li><a href="nutrion.html">Nutrition</a></li> 
                     <li><a href="contact.html">Contact Us</a></li>
@@ -43,7 +43,7 @@
         <div id="weights">
             <h1>Weights</h1>
 
-            <img src="images/people-with-weights.jpg" alt="Two people working out with a weight in each hand" class="round">
+            <img src="{% static 'people-with-weights.jpg' %}" alt="Two people working out with weights">
 
             <p> Our facility includes a weight training area with several weight options. Build lean muscle with weights and improve your core with weight training</p>
             
@@ -56,7 +56,7 @@
 
          <div id="cardio">
             <h1>Cardio</h1>
-            <img class="equip" src="images/people-workingout-machines.jpg" alt="Cardio Equipment" class="round">
+            <img src="{% static 'people-workingout-machines.jpg' %}" alt="people working out with machines" class="round">
             <p> Burn fat through cardio workouts. Experts recommend 150 minutes
             of cardio each week. We have several equipment choices for your workout.</p>
 
@@ -69,7 +69,7 @@
 
         <div id="training">
             <h1>Personal Training</h1>
-            <img class="equip" src="images/personal-trainer.jpg" alt="Personal Training" class="round">
+            <img src="{% static 'personal-trainer.jpg' %}" alt="personal trainers"> class="round">
             <p> Our certified personal trainers work with you to help you obtain your fitness
             goals and track your progress. Personal training has many benefits.</p>
 
