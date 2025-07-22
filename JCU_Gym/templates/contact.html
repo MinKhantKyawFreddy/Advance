@@ -52,42 +52,36 @@
         <div id="form">
 
             <h2>Complete the form below to begin your free trial.</h2>
-            <form class="form-grid"> <!-- Start Form -->
-                <fieldset>
+            <form class="form-grid" method="post"> {% csrf_token %} <fieldset>
                     <legend>Customer Information</legend>
                     <label for="fName">First Name:</label>
-                    <input type="text" name="fName" id="fName">
-                    <label for="lName">Last Name:</label>
-                    <input type="text" name="lName" id="lName">
-                    <label for="email">Email:</label>
+                    <input type="text" name="first_name" id="fName"> <label for="lName">Last Name:</label>
+                    <input type="text" name="last_name" id="lName"> <label for="email">Email:</label>
                     <input type="email" name="email" id="email">
                     <label for="phone">Phone: </label>
-                    <input type="tel" id="phone" name= "phone">
+                    <input type="tel" id="phone" name="phone">
                 </fieldset>
 
                 <fieldset>
                     <legend>Additional Information</legend>
                     <p>I would like more information about:</p>
-                    <label for="grpfit"><input type="checkbox" name="interest" id="grpfit" value="Group
-                    Fitness">Group Fitness</label>
-                    <label for="prtrain"><input type="checkbox" name="interest" id="prtrain"
-                    value="Personal Training">Personal Training</label>
-                    <label for="nutr"><input type="checkbox" name="interest" id="nutr"
-                    value="Nutrition">Nutrition</label>
+                    <label for="grpfit"><input type="checkbox" name="interest" id="grpfit" value="Group Fitness">Group Fitness</label>
+                    <label for="prtrain"><input type="checkbox" name="interest" id="prtrain" value="Personal Training">Personal Training</label>
+                    <label for="nutr"><input type="checkbox" name="interest" id="nutr" value="Nutrition">Nutrition</label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Referral Source</legend>
                     <label for="reference">How did you find us?</label>
                     <select name="reference" id="reference">
-                    <option value="ad">Advertisement</option>
-                    <option value="friend">Friend</option>
-                    <option value="google">Google</option>
-                    <option value="social">Social Media</option>
-                    <option value="other">Other</option>
+                        <option value="ad">Advertisement</option>
+                        <option value="friend">Friend</option>
+                        <option value="google">Google</option>
+                        <option value="social">Social Media</option>
+                        <option value="other">Other</option>
                     </select>
-                            <label for="questions"> Questions?</label>
-                            <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
+                    <label for="questions"> Questions?</label>
+                    <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
                 </fieldset>
                 <input type="submit" id="submit" value ="Submit" class="btn">
             </form>
