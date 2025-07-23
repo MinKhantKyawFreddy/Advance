@@ -1,0 +1,22 @@
+[
+{
+  "model": "JCU_Gym.member",
+  "pk": 1,
+  "fields": {
+    "First_Name": "Freddy",
+    "Last_Name": "Freddy",
+    "Email": "john@gmail.com",
+    "Phone": 83591099
+  }
+},
+{
+  "model": "JCU_Gym.member",
+  "pk": 2,
+  "fields": {
+    "First_Name": "James",
+    "Last_Name": "James",
+    "Email": "test@gmail.com",
+    "Phone": 83591099
+  }
+}
+]
