@@ -11,6 +11,14 @@ body {
     height: 100vh;
 }
 
+h1 {
+    background-color: #54ef29; /* Blue banner */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+}
 
 
 
