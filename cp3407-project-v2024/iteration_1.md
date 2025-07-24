@@ -23,15 +23,15 @@ In progress:
 * Task-2 (developer name or initials), date started
 *  Book Gym Session
 *  AI- Powered workout plan
-*  Manage User Registrations
 *  Generate and Download Usage Reports
 *  Monitor Gym Session Bookings and Attendance
 
 
 Completed:
 * Task-3 (developer name or initials), date completed
-* User Registration
-* Basic Gym website
+* User Registration with backend(For data storage'first name, last name, email, phone' uses Django ) = 22 June 2025
+* Basic Gym website including(including Javascript, css, html for front end (linked with Django for backend) )  = 20 July 2025
+* Manage User Registration (Can access via Django Admin website: where admin's are able to add or deleate the users: ) = 22 July 2025
 
 ### Burn Down for iteration-1 (see chapter 4):
 Update this at least once per week
