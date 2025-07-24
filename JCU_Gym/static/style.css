@@ -1,0 +1,41 @@
+/* style.css */
+
+body {
+    background-color: #e3f2fd;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.message-box {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 20px; /* space between h1 and h2 */
+}
+
+
+h1 {
+    background-color: #22d0f6; /* Blue banner */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+}
+
+h2 {
+    background-color: #22f626; /* Blue banner */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+}
+
+
+
