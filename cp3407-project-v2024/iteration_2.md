@@ -1,29 +1,45 @@
-# Actual iteration-2 board, (see chapters 3 and 4), add your start and end dates 
+Actual iteration‑2 board
+Checklist:
 
-Checklist: 
-1. github entry timestamps
-2. User stories are correct: see p39
+GitHub entry timestamps recorded for each commit
 
-* Assumed Velocity FROM iteration-1: ?? 
-* Number of developers: ??
-* Total estimated amount of work: YY days
+User stories are correct (see p39)
 
-User stories or tasks (see chapter 4):
-1. [user story or task title](./user_stories/user_story_01_title.md), priority XX, YY days 
-2. ...
+Assumed Velocity from iteration‑1: 19
+Number of Developers: 4
+Total Estimated Amount of Work: 19 days
 
-In progress:
-* Task-2 (developer name or initials), date started
-* ...
+User stories or tasks (see chapter 4)
+AI‑Powered Workout Plan – Priority High, 5 days 
 
-Completed:
-* Task-3 (developer name or initials), date completed
-* ...
+Generate and Download Usage Reports – Priority High, 4 days 
 
-### Burn Down for iteration-2 (see chapter 4):
-Update this at least once per week
-* 4 weeks left, xx days of estimated amount of work 
-* 2 weeks left, xx days
-* 1 weeks left, xx days
-* 0 weeks left, xx days
-* Actual Velocity: ?? 
+Monitor Gym Session Bookings and Attendance – Priority Medium, 3 days 
+
+Integrate Payment Gateway for Memberships – Priority Medium, 4 days 
+
+
+
+In progress
+Task‑1: AI‑Powered Workout Plan  – Started 23 July 2025
+
+Task‑2: Generate and Download Usage Reports  – Started 24 July 2025
+
+Task‑3: Monitor Gym Session Bookings and Attendance – Started 26 July 2025
+
+Completed
+Task‑4: Integrate Payment Gateway for Memberships  – Completed 5 August 2025
+
+Task‑5: Add Workout History Tracking for Users  – Completed 10 August 2025
+
+
+### Burn Down for iteration‑2
+* 4 weeks left: 19 days of estimated amount of work
+
+* 2 weeks left: 10 days of work remaining
+
+* 1 week left: 5 days of work remaining
+
+* 0 weeks left: 2 days of work remaining
+
+* Actual Velocity: 20
