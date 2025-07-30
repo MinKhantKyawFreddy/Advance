@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/minkhantkyaw/Library/CloudStorage/OneDrive-JamesCookUniversity/Ass Advance/Advance/virtual_env/bin/python" "$0" "$@"
-' '''
+#!/Users/jamesrunneilian/Desktop/Advance1/virtual_env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
