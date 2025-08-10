@@ -2,82 +2,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Fitness Forward Club - Gym Booking</title>
+    <title>Fitness Forward Club</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-<div id="container">
+    <div id="container">
 
-    <!-- Mobile Nav -->
-    <nav class="mobile-nav">
-        <div id="menu-links">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}">About us</a>
-            <a href="{% url 'classes' %}">Classes</a>
-            <a href="{% url 'nutrition' %}">Nutrition</a>
-            <a href="{% url 'contact' %}">Contact Us</a>
+        <!-- Mobile Nav -->
+        <nav class="mobile-nav">
+            <div id="menu-links">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About us</a>
+                <a href="classes.html">Classes</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
+            </div>
+            <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+            </a>
+        </nav>
+
+        <header>
+            <a href="{% url 'index' %}"><img src="{% static 'Jculogo_compressed_resized_resized.png' %}" alt="JCU Logo" id="ffc-logo"></a>
+        </header>
+        
+        <nav class="tablet-desktop">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="classes.html">Classes</a></li>   
+                <li><a href="nutrition.html">Nutrition</a></li> 
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <main>
+        <div id="attribute">
+            <h2>Book Your Gym Slot</h2>
+            <h3><a href="tel:8145559608">Call us today at: (814) 555-9608</a></h3>
+            <h3>Email us: <a href="mailto:JCUfitness@club.net">JCUfitness@club.net</a></h3>
+            <h3>Visit us at: 1275 Channel CENTER Street, Boston, MA 02210</h3>
         </div>
-        <a class="menu-icon" onclick="hamburger()">
-            <div>&#9776;</div>
-        </a>
-    </nav>
 
-    <header>
-        <a href="{% url 'index' %}"><img src="{% static 'Jculogo_compressed_resized_resized.png' %}" alt="JCU Logo" id="ffc-logo"></a>
-    </header>
+        <div id="form">
+            {% if message %}
+                <p style="color: {{ 'green' if success else 'red' }}; font-weight: bold;">
+                    {{ message }}
+                </p>
+            {% endif %}
 
-    <nav class="tablet-desktop">
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About us</a></li>
-            <li><a href="{% url 'classes' %}">Classes</a></li>
-            <li><a href="{% url 'nutrition' %}">Nutrition</a></li>
-            <li><a href="{% url 'contact' %}">Contact Us</a></li>
-        </ul>
-    </nav>
+            <h2>Complete the form below to reserve your slot.</h2>
+            <form class="form-grid" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="fName">First Name:</label>
+                    <input type="text" name="first_name" id="fName" required> 
 
-</div>
+                    <label for="lName">Last Name:</label>
+                    <input type="text" name="last_name" id="lName" required> 
 
-<main>
-    <div id="attribute">
-        <h2>Book Your Gym Time Slot</h2>
-        {% if message %}
-            <p class="{% if success %}success{% else %}error{% endif %}">
-                {{ message }}
-            </p>
-        {% endif %}
-    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
 
-    <div id="form">
-        <form class="form-grid" method="post">
-            {% csrf_token %}
-            <fieldset>
-                <legend>Booking Information</legend>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
+                    <label for="phone">Phone: </label>
+                    <input type="tel" id="phone" name="phone" required>
+                </fieldset>
 
-                <label for="time">Time Slot:</label>
-                <select name="time" id="time" required>
-                    <option value="06:00-07:00">06:00 - 07:00</option>
-                    <option value="07:00-08:00">07:00 - 08:00</option>
-                    <option value="08:00-09:00">08:00 - 09:00</option>
-                    <option value="17:00-18:00">17:00 - 18:00</option>
-                    <option value="18:00-19:00">18:00 - 19:00</option>
-                </select>
-            </fieldset>
-            <input type="submit" value="Book Now" class="btn">
-        </form>
-    </div>
-</main>
+                <fieldset>
+                    <legend>Booking Details</legend>
+                    <label for="time_slot">Select Time Slot:</label>
+                    <select name="time_slot" id="time_slot" required>
+                        {% for value, label in time_slots %}
+                            <option value="{{ value }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </fieldset>
 
-<footer>
-    <br>
-    <p>&copy; Copyright 2025 All Rights Reserved.</p>
-    <p><a href="mailto:JCUfitness@club.net">JCUfitness@club.net</a></p>
-</footer>
-<script src="{% static 'script1.js' %}"></script>
+                <input type="submit" id="submit" value="Book Now" class="btn">
+            </form>
+        </div>
+    </main>
+
+    <footer><br>
+        <p>&copy; Copyright 2022 All Rights Reserved.</p>
+        <p><a href="mailto:JCUfitness@club.net">JCUfitness@club.net</a></p>
+    </footer>
+    
+    <script src="{% static 'script1.js' %}"></script>
 </body>
 </html>

@@ -2,8 +2,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-from .models import Member # Import your Member model
+from django import forms
+from .models import Member, Booking,  # Import your Member model
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import authenticate, login
+from .forms import LoginForm
+from django.contrib.auth.models import User
+
 
 def index(request):
     return render(request, 'index.html')
@@ -66,3 +72,39 @@ def login_view(request):
             else:
                 form.add_error('password', "Incorrect password.")
     return render(request, 'home_app/login.html', {'form': form})
+
+
+@csrf_exempt
+def booking_view(request):
+    message = None
+    success = False
+
+    if request.method == "POST":
+        first_name = request.POST.get("first_name")
+        last_name = request.POST.get("last_name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        time_slot = request.POST.get("time_slot")
+
+        # Count bookings for the selected slot
+        current_count = Booking.objects.filter(time_slot=time_slot).count()
+
+        if current_count >= MAX_PER_SLOT:
+            message = "Gym is full for that time"
+        else:
+            Booking.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+                phone=phone,
+                time_slot=time_slot
+            )
+            message = "Gym Successful"
+            success = True
+
+    return render(request, "booking.html", {
+        "message": message,
+        "success": success,
+        "time_slots": Booking.TIME_SLOTS  # so template can build dropdown
+    })
+
