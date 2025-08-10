@@ -36,7 +36,7 @@ Configure MySQL database and ensure seamless data operations.
 Contribution: Write and test backend logic, manage database schema, and document API endpoints and database design using GenMyModel.
 
 
-May Thin Thet (Testing and Documentation Lead):
+May Thin Htet (Testing and Documentation Lead):
 Responsibilities: Lead testing efforts, including unit tests (Jest) and acceptance testing for all user stories. Coordinate documentation for GitHub Pages, including UML diagrams (Gliffy), testing plans, and tool usage.
 Contribution: Develop test cases, validate feature functionality, and ensure high-quality technical writing in the README and GitHub Pages.
 
