@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member # Import your Member model
+from django.contrib.auth.models import User
 
 def index(request):
     return render(request, 'index.html')
@@ -47,3 +48,21 @@ def contact(request):
 
 def contact_success(request):
     return render(request, 'submitted.html')
+
+def login_view(request):
+    form = LoginForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        email = form.cleaned_data['email']
+        password = form.cleaned_data['password']
+        try:
+            username = User.objects.get(email=email).username
+        except User.DoesNotExist:
+            form.add_error('email', "No account with that email.")
+        else:
+            user = authenticate(request, username=username, password=password)
+            if user:
+                login(request, user)
+                return redirect('home')
+            else:
+                form.add_error('password', "Incorrect password.")
+    return render(request, 'home_app/login.html', {'form': form})

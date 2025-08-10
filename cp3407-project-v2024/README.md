@@ -1,4 +1,4 @@
-## Team 2
+## Class B: Team 2
 1. James 
 2. Min Khant Kyaw
 3. Nay Thar Htet

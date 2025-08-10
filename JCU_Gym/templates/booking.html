@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fitness Forward Club - Gym Booking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<div id="container">
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About us</a>
+            <a href="{% url 'classes' %}">Classes</a>
+            <a href="{% url 'nutrition' %}">Nutrition</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
+
+    <header>
+        <a href="{% url 'index' %}"><img src="{% static 'Jculogo_compressed_resized_resized.png' %}" alt="JCU Logo" id="ffc-logo"></a>
+    </header>
+
+    <nav class="tablet-desktop">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="{% url 'classes' %}">Classes</a></li>
+            <li><a href="{% url 'nutrition' %}">Nutrition</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<main>
+    <div id="attribute">
+        <h2>Book Your Gym Time Slot</h2>
+        {% if message %}
+            <p class="{% if success %}success{% else %}error{% endif %}">
+                {{ message }}
+            </p>
+        {% endif %}
+    </div>
+
+    <div id="form">
+        <form class="form-grid" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Booking Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="time">Time Slot:</label>
+                <select name="time" id="time" required>
+                    <option value="06:00-07:00">06:00 - 07:00</option>
+                    <option value="07:00-08:00">07:00 - 08:00</option>
+                    <option value="08:00-09:00">08:00 - 09:00</option>
+                    <option value="17:00-18:00">17:00 - 18:00</option>
+                    <option value="18:00-19:00">18:00 - 19:00</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Book Now" class="btn">
+        </form>
+    </div>
+</main>
+
+<footer>
+    <br>
+    <p>&copy; Copyright 2025 All Rights Reserved.</p>
+    <p><a href="mailto:JCUfitness@club.net">JCUfitness@club.net</a></p>
+</footer>
+<script src="{% static 'script1.js' %}"></script>
+</body>
+</html>
