@@ -15,11 +15,10 @@
             <!-- Mobile Nav -->
         <nav class="mobile-nav">
                 <div id="menu-links">
-                <a href="../Fitness/index.html">Home</a>
-                <a href="../Fitness/about.html">About Us</a>
-                <a href="classes.html">Classes</a>
-                <a href="nutrition.html">Nutrition</a>
-                <a href="../Fitness/contact.html">Contact Us</a>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About us</a>
+                <a href="{% url 'booking' %}">Booking</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
                 </div>
                 <a class="menu-icon" onclick="hamburger()">
                 <div>&#9776;</div>
@@ -30,15 +29,19 @@
                 <a href="{% url 'index' %}"><img src="{% static 'Jculogo_compressed_resized_resized.png' %}" alt="JCU Logo" id="ffc-logo"></a>
             </header>
             <!-- Tablet,Desktop -->
-    <nav class="tablet-desktop">
-        <ul>
-                <li><a href="../Fitness/index.html">Home</a></li>
-                <li><a href="../Fitness/about.html"> About us</a></li>
-                <li><a href="classes.html">Classes</a></li>   
-                <li><a href="nutrion.html">Nutrition</a></li> 
-                <li><a href="../Fitness/contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+        <nav class="mobile-nav">
+                <div id="menu-links">
+               <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="{% url 'booking' %}">Booking</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+                </div>
+                <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+                </a>
+        </nav>
     </div>
 
     <!-- Hero Image -->
